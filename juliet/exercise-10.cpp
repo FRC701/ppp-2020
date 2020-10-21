@@ -2,20 +2,23 @@
 #include "std_lib_facilities.h"
 int main()
 {
-    cout << "Type 1 for Rock, 2 for Paper, or 3 for Scissors.\n";
-    int random = rand() % 3;
-    char random;
-    cin >> random;
+    cout << "Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n";
+    int random = rand() % 2 + 1;
+    srand(time(0));
+    int user = 0;
+
     vector <string> choice(3);
     choice[0] = "Rock";
     choice[1] = "Paper";
     choice[2] = "Scissors";
+
     string choices;
     while (cin >> random)
     {
         choices.push_back(random);
     }
-    switch (random == 1) // if i choose rock
+
+/*    switch (random == 1) // if i choose rock
     {
     case '1':
         cout << "Tie!\n";
@@ -50,5 +53,5 @@ int main()
     case '3':
         cout << "Tie!\n";
         break;
-    }
+    } */
 }
