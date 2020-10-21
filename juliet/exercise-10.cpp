@@ -6,6 +6,8 @@ int main()
     int random = rand() % 2 + 1;
     srand(time(0));
     int user = 0;
+    cin >> user;
+    cout << user << '\n';
 
     vector <string> choice(3);
     choice[0] = "Rock";
@@ -17,6 +19,8 @@ int main()
     {
         choices.push_back(random);
     }
+
+    cout << choices << '\n'; // testing
 
 /*    switch (random == 1) // if i choose rock
     {
