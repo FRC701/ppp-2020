@@ -3,25 +3,18 @@
 int main()
 {
     cout << "Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n";
-    srand(time(0));
+    srand(time(nullptr));
     int random = rand() % 3;
     int user = 0;
     cin >> user;
-    cout << user << '\n';
-    cout << random << '\n';
 
     vector <string> choice(3);
     choice[0] = "Rock";
     choice[1] = "Paper";
     choice[2] = "Scissors";
 
-    string choices;
-    while (cin >> random)
-    {
-        choices.push_back(random);
-    }
-
-    cout << choices << '\n'; // testing
+    cout << "You selected:" << choice[user] << '\n';
+    cout << "The computer selected:" << choice[random] << '\n';
 
 /*    switch (random == 1) // if i choose rock
     {
