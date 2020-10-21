@@ -3,11 +3,12 @@
 int main()
 {
     cout << "Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n";
-    int random = rand() % 2 + 1;
     srand(time(0));
+    int random = rand() % 3;
     int user = 0;
     cin >> user;
     cout << user << '\n';
+    cout << random << '\n';
 
     vector <string> choice(3);
     choice[0] = "Rock";
